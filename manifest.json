@@ -1,0 +1,21 @@
+{
+  "name": "Scryfall Plugin",
+  "version": "1.0",
+  "description": "Adds MTGGoldfish, Card Kingdom, and MTGStocks links to Scryfall toolbox",
+  "manifest_version": 2,
+  "permissions": ["storage"],
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://scryfall.com/*",
+        "https://scryfall.com/*",
+        "http://www.scryfall.com/*",
+        "https://www.scryfall.com/*"
+      ],
+      "js": ["scryfall-plugin.js"]
+    }
+  ]
+}
